@@ -1,0 +1,601 @@
+﻿ID,Student Name,Exercise Name,Status,Score,Remarks,Submitted Code,Model Solution for Students,Exercise Link
+14299,Rajen Shrestha,Day 1 - Morning Challenge,Done,,"MI: Good Job!
+","const dOffsets = {
+    0: [-1, 0],
+    1: [0, 1],
+    2: [1, 0],
+    3: [0, -1],
+}
+function mysteryMachine(grid, row, col, n, dir) {
+    while (n > 0) {
+        let color = grid[row][col];
+        grid[row][col] = color === 0 ? 1 : 0; //1
+
+        color === 0 ? dir-- : dir++;
+        if (dir < 0) {
+            dir = 3;
+        } else if (dir > 3) {
+            dir = 0;
+        }
+        let [x, y] = dOffsets[dir]; //2
+
+        [row, col] = [row + x, col + y];
+        if (grid[row] === undefined) {
+            if (row === -1) {
+                row++;
+                grid.unshift(grid[0].map(v => 0))
+            } else {
+                grid.push(grid[0].map(v => 0))
+            }
+        } else if (grid[row][col] === undefined) {
+            if (col === -1) {
+                col++;
+                grid.unshift(r => r.push(0));
+            } else {
+                grid.map(r => r.push(0));
+            }
+        }
+        n--;
+    }
+    return grid;
+}
+console.log(mysteryMachine([[1]], 0, 0, 1, 0));
+// should return: [[0, 0]]
+
+console.log(mysteryMachine([[1]], 0, 0, 3, 0));
+// should return [[0,1],[0,1]]
+
+console.log(mysteryMachine([[0, 0, 0], [0, 0, 0], [0, 0, 0]], 2, 2, 10, 1));
+// should return [[0, 0, 0, 0], [0, 1, 1, 0], [0, 1, 1, 1], [0, 0, 0, 1]]",,https://classroom.github.com/a/Pxp0CnGu
+14325,Rajen Shrestha,Day 1 - Full page layout,Done,,,,,https://classroom.github.com/a/PnV1cpEL
+14347,Rajen Shrestha,Day 1 - Tribute Page,Done,,"MI: Missing H3Tag, the bottom section should be center aligned.
+","MI: Missing H3Tag, the bottom section should be center aligned.
+I hope its okay now :))",,https://classroom.github.com/a/sUPNNxiC
+14382,Rajen Shrestha,Day 1 - Tree of Words,Done,,,,,https://classroom.github.com/a/6fFkGNM4
+14403,Rajen Shrestha,Day 2 - Morning Challenge,Done,,,,,https://classroom.github.com/a/2vg1Q8Uf
+14430,Rajen Shrestha,Day 2 - Notification Cards,Done,,"MI: Please handle he cards with box shadow styling. also we need to see the border radius. Please try your best to stick to the required styles.
+","handled
+- box shadow styling.
+- the border radius. 
+",,https://classroom.github.com/a/XFFHecWN
+14443,Rajen Shrestha,Day 2 - Flexbox Starter (centered items),Done,,,,,https://classroom.github.com/a/lEkpsLwS
+14456,Rajen Shrestha,Day 2 - Four Cards Assignment,Done,,"AP: Good work, missing shadows",,,https://classroom.github.com/a/lb6uH6sE
+14469,Rajen Shrestha,Day 3 - Morning Challenge,Done,,,,,https://classroom.github.com/a/pbPpKOuq
+14483,Rajen Shrestha,Day 3 - Flexbox Froggy,Done,,,,,https://flexboxfroggy.com/
+14496,Rajen Shrestha,Day 3 - Testimonial Grid,Done,,,https://taupe-dodol-0a2380.netlify.app/,,https://classroom.github.com/a/7n8P8Kx2
+14510,Rajen Shrestha,Day 3 - Pricing Grid,Done,,"MI: Please fix the deployment as the site is not working
+",https://spiffy-flan-b9fd8c.netlify.app/,,https://classroom.github.com/a/LEmlO-_3
+14523,Rajen Shrestha,Day 3 - Flexbox Layout,Done,,MI: Apply a little margin on the left and below the Subscribe link tag ,,,https://classroom.github.com/a/TqpX60D5
+14536,Rajen Shrestha,Day 4 - Morning Challenge,Done,,,,,https://classroom.github.com/a/8gZDc6l8
+14549,Rajen Shrestha,Day 4 - Responsive Webpage,Done,,,https://playful-hamster-9dc34d.netlify.app/,,https://classroom.github.com/a/lpaJ9ONe
+14562,Rajen Shrestha,Day 4 - Testimonial Grid Responsive,Done,,,https://taupe-dodol-0a2380.netlify.app/,,
+14575,Rajen Shrestha,Day 5 - Morning Challenge,Done,,,,,https://classroom.github.com/a/tw5qWxjO
+14588,Rajen Shrestha,Day 5 - Project Friday Insure Landing,Done,,"MI: Please check the menu bar as in the desktop, it still appears and the options don't appear in the toolbar. 
+
+Please check the ""Find out more"" as you need to add more styling and HTML as to match the requirements.
+","https://resilient-madeleine-51e0b0.netlify.app/
+
+I did everything from scratch and its just same like the requirement this time :)) if there are comments please make a loom video if its ok, text comments are confusing 😕😕😕",,https://classroom.github.com/a/aYRr9R5U
+14601,Rajen Shrestha,Day 6 - Morning Challenge,Done,,,,,https://classroom.github.com/a/rJ-uniEp
+14614,Rajen Shrestha,Day 6 - CSS Drop Down Menu,Done,,"MI: Please deploy on netlify
+",https://dapper-khapse-572ffb.netlify.app/,,https://classroom.github.com/a/fj3zM3AB
+14628,Rajen Shrestha,Day 6 - JS DOM Introduction,Done,,,https://courageous-lolly-9ad745.netlify.app/,,https://classroom.github.com/a/X8H0FCS0
+14647,Rajen Shrestha,Day 6 - Dice Shuffle,Done,,AP: Missing the total and the dots are not in the required design,https://monumental-gingersnap-0adbf8.netlify.app/,,https://classroom.github.com/a/3kkcz74R
+14661,Rajen Shrestha,Day 7 - Morning Challenge,Done,,,,,https://classroom.github.com/a/sSMAGgNV
+14674,Rajen Shrestha,Day 7 - CSS Vars and JS DOM,Done,,,https://polite-klepon-a7ad1d.netlify.app/,,https://classroom.github.com/a/KJnEY6Dc
+14690,Rajen Shrestha,Day 7 - Profile Card,Done,,,https://wonderful-cendol-b9da89.netlify.app/,,https://classroom.github.com/a/tNzJ5zJq
+14703,Rajen Shrestha,Day 8 - Morning Challenge,Done,,,,,https://classroom.github.com/a/tOKDctwd
+14716,Rajen Shrestha,Day 8 - Reading Progress Bar,Done,,MI: Set the initial progress bar completion to be 0% by the initial css properties.,https://effortless-gecko-4a3628.netlify.app/,,https://classroom.github.com/a/2EGtHH_g
+14729,Rajen Shrestha,Day 8 - Fullpage Menu,Done,,MI: Please add a transition to the color change of the border not an instant change along with the showing and the hiding of the menu. Please add some delay between the items when each item in the menu is sliding to the left on open and to the right on close.,https://bright-baklava-3491e7.netlify.app/,,https://classroom.github.com/a/Ud2mWG64
+14743,Rajen Shrestha,Day 9 - Morning Challenge,Done,,,,,https://classroom.github.com/a/RYvaX5rS
+14756,Rajen Shrestha,Day 9 - Fetch Method Practice,Done,,,https://lighthearted-biscuit-d51f63.netlify.app/,,https://classroom.github.com/a/V_lOKK8M
+14769,Rajen Shrestha,Day 9 - Weather Website,Done,,,https://comfy-cuchufli-82fb99.netlify.app/,,https://classroom.github.com/a/_Ly_9yRa
+14782,Rajen Shrestha,Day 10 - Morning Challenge,Done,,,https://bejewelled-sawine-e976ce.netlify.app/,,https://classroom.github.com/a/gWfAX29H
+14795,Rajen Shrestha,Day 10 - Simon Game,Done,,,https://stellular-mooncake-b6d7c4.netlify.app/,,https://classroom.github.com/a/e-f9_isf
+14808,Rajen Shrestha,Day 11 - Morning Challenge,Done,,,,,https://classroom.github.com/a/3_YPRkeP
+14821,Rajen Shrestha,Day 11 - Testimonial Slider,Done,,AP: Good work on animation and slider. But the image is not changing and you need to finish the design as per the given screenshot in the repo,"https://stellar-taffy-a7c543.netlify.app/
+
+Image changes, please let page load properly first, like wait for 5 second please",,https://classroom.github.com/a/ScRqzeoJ
+14834,Rajen Shrestha,Day 11 - Github Search Project,Done,,,https://cool-lebkuchen-9db022.netlify.app/,,https://classroom.github.com/a/ho1-UFQr
+14847,Rajen Shrestha,Day 12 - Morning Challenge,Done,,,,,https://classroom.github.com/a/nwetUIG0
+14861,Rajen Shrestha,Day 12 - CSS Forms Validation,Done,,"MI: Please deploy your application
+",https://day-10-html-css-form-validation-razen7.vercel.app/,,https://classroom.github.com/a/7P-YK6kc
+14874,Rajen Shrestha,Day 13 - Morning Challenge,Done,,,,,https://classroom.github.com/a/-ksM-ueL
+14887,Rajen Shrestha,Day 13 - Cake Shop,Done,,,https://incomparable-kleicha-ded9d5.netlify.app/,,https://classroom.github.com/a/EABXl57k
+14900,Rajen Shrestha,Day 13 - NFT Card,Done,,,https://day-13-nft-card-razen7.vercel.app/,,https://classroom.github.com/a/vMOY5Tze
+14913,Rajen Shrestha,Day 14 - Morning Challenge,Done,,,,,https://classroom.github.com/a/6uj-2DUM
+14926,Rajen Shrestha,Day 14 - Employee Directory,Done,,MI: Profile photos should be rounded,https://rainbow-beignet-128f8f.netlify.app/,,No Starter Repo
+14939,Rajen Shrestha,Day 14 - Color Palette,Done,,,https://splendorous-lollipop-656240.netlify.app/,,https://classroom.github.com/a/vcnkB1ru
+14952,Rajen Shrestha,Day 15 - Morning Challenge,Done,,,https://keen-cupcake-616719.netlify.app/,,https://classroom.github.com/a/8w4ZoDT1
+14965,Rajen Shrestha,Day 15 - TicTacToe React,Done,,AP: Nice,https://darling-travesseiro-fe4a19.netlify.app/,,No Starter Repo
+14978,Rajen Shrestha,Day 16 - Morning Challenge,Done,,,,,https://classroom.github.com/a/-Qnx55Lb
+14991,Rajen Shrestha,Day 16 - TicTacToe with history,Done,,,https://darling-travesseiro-fe4a19.netlify.app/,,No Starter Repo
+15004,Rajen Shrestha,Day 16 - Xylophone App,Done,,,https://inquisitive-bonbon-d92810.netlify.app/,,https://classroom.github.com/a/jd8OQJwz
+15043,Rajen Shrestha,Day 17 - Morning Challenge,Done,,,https://day-17-morning-challenge-razen7-1.vercel.app/,,https://classroom.github.com/a/ICDM0AhD
+15030,Rajen Shrestha,Day 17 - GIFUFY - GIF Browser,Done,,MI: The sticker/gifs and search/word to gif doesn't work. Please check the toggle logic,https://day-17-gifufy-gif-browser-razen7.vercel.app/,,https://classroom.github.com/a/S_ABKMAG 
+15056,Rajen Shrestha,Day 18 - Morning Challenge,Done,,,,,https://classroom.github.com/a/DWWbjueZ
+15017,Rajen Shrestha,Day 18 - Exam 1 Submission,Done,55.0,AP: The fit and finish is not proper and the JS part is not functional,https://magical-hotteok-15f3a1.netlify.app/,,https://classroom.github.com/a/FUAI7D0l
+15082,Rajen Shrestha,Day 19 - Morning Challenge,Done,,,,,https://classroom.github.com/a/hLT3jVqC
+15099,Rajen Shrestha,Day 19 - Quiz App Part 1,Done,,,"https://quiz-app-eight-blue.vercel.app/
+https://github.com/razen7/quiz-app",,No Starter Code
+15112,Rajen Shrestha,Day 20 - Morning Challenge,Done,,"MI: Please submit the correct link
+","let testBoard = [
+    [""E"", ""A"", ""R"", ""A""],
+    [""N"", ""L"", ""E"", ""C""],
+    [""I"", ""A"", ""I"", ""S""],
+    [""B"", ""Y"", ""O"", ""R""]
+];
+console.log(checkWord(testBoard, 'EAR')); // should return true
+console.log(checkWord(testBoard, 'EARS')); // should return false
+console.log(checkWord(testBoard, 'BAILER')); // should return true
+console.log(checkWord(testBoard, 'RSCAREIOYBAILNEA')); // should return true
+
+function checkWord(board = [], word = '') {
+    for (let rI = 0; rI < board.length; rI++) {
+        const row = board[rI];
+        for (let cI = 0; cI < row.length; cI++) {
+            const letter = row[cI];
+            if (letter === word[0]) {
+                boardCopy = JSON.parse(JSON.stringify(board));
+                boardCopy[rI][cI] = '';
+                let explore = searchNeighbours(boardCopy, rI, cI, word.substring(1));
+                if (explore === true) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+
+function searchNeighbours(board = [], rI, cI, word = '') {
+    // victory
+    if (word === '') {
+        return true;
+    }
+
+    // battle
+    let target = word[0];
+    const offsets = [
+        [-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, -1],
+        [0, 1],
+        [1, -1],
+        [1, 0],
+        [1, 1],
+    ];
+    for (let oI = 0; oI < offsets.length; oI++) {
+        const [x, y] = offsets[oI];
+
+        if (board[rI + x] && board[rI + x][cI + y] && board[rI + x][cI + y] === target) {
+            boardCopy = JSON.parse(JSON.stringify(board));
+            boardCopy[rI + x][cI + y] = '';
+            let explore = searchNeighbours(boardCopy, rI + x, cI + y, word.substring(1));
+            if (explore === true) {
+                return explore;
+                // return true;
+            }
+        }
+    }
+    return false;
+}",,https://gist.github.com/McLarenCollege/6508c5ca1de0daa7d0af99dfaa995c0e
+15127,Rajen Shrestha,Day 20 - Movies Website,Done,,,"https://ksdlfjsaldkfj.vercel.app/
+https://github.com/razen7/ksdlfjsaldkfj",,https://classroom.github.com/a/F09B2H6t
+15140,Rajen Shrestha,Day 21 - Morning Challenge,Done,,,"let mapObj = {
+    ""A"": [""B"", ""D"", ""E"", ""F"", ""H"", ""BC"", ""EI"", ""DG""],
+    ""B"": [""A"", ""C"", ""E"", ""D"", ""F"", ""G"", ""I"", ""EH""],
+    ""C"": [""B"", ""D"", ""E"", ""F"", ""H"", ""BA"", ""EG"", ""FI""],
+    ""D"": [""A"", ""B"", ""E"", ""C"", ""G"", ""H"", ""I"", ""EF""],
+    ""E"": [""A"", ""B"", ""C"", ""D"", ""F"", ""G"", ""H"", ""I""],
+    ""F"": [""C"", ""B"", ""E"", ""A"", ""G"", ""H"", ""I"", ""ED""],
+    ""G"": [""D"", ""E"", ""H"", ""B"", ""F"", ""DA"", ""HI"", ""EC""],
+    ""H"": [""G"", ""E"", ""I"", ""D"", ""A"", ""C"", ""F"", ""EB""],
+    ""I"": [""H"", ""F"", ""E"", ""D"", ""B"", ""FC"", ""HG"", ""EA""],
+}
+
+function countPatternsFrom(start, length, buffer = '', allCombinations = []) {
+    buffer += start;
+
+    //base
+    if (buffer.length === length) {
+        allCombinations.push(buffer);
+        return;
+    }
+
+    // recursive
+    for (const chr of mapObj[start]) {
+        if (chr.length === 1) {
+            if (!buffer.includes(chr)) {
+                countPatternsFrom(chr, length, buffer, allCombinations);
+            }
+        } else if (chr.length === 2) {
+            if (buffer.includes(chr[0])) {
+                if (!buffer.includes(chr[1]))
+                    countPatternsFrom(chr[chr.length - 1], length, buffer, allCombinations);
+            }
+        }
+    }
+
+    // if (buffer.length === 1) {
+    //     allCombinations.sort()
+    //     console.log(allCombinations);
+    // }
+    return allCombinations.length;
+
+}
+
+
+console.log(countPatternsFrom('D', 3))  // Should return 37
+console.log(countPatternsFrom('E', 4)) // Should return 256
+console.log(countPatternsFrom('E', 8)); // Should return 23280",,https://gist.github.com/McLarenCollege/6853c4fad08d21d0c1c84c34f6feff27
+15153,Rajen Shrestha,Day 21 - Quiz App with Score Page,Done,,,"https://quiz-app-eight-blue.vercel.app/
+https://github.com/razen7/quiz-app",,No Starter Repo
+15166,Rajen Shrestha,Day 22 - Morning Challenge,Done,,,https://62ceaaaff6524d0b4052868f--velvety-cheesecake-594b6d.netlify.app/,,https://classroom.github.com/a/niYConZu
+15182,Rajen Shrestha,Day 22 - Markdown Editor,Done,,"MI: Code and quote is not implemented to be parsed
+",https://resilient-fenglisu-fc822c.netlify.app/,,https://classroom.github.com/a/GM3c-C8z
+15195,Rajen Shrestha,Day 22 - Landing Page builder,Done,,,https://day-22-landing-page-builder-razen7.vercel.app/,,https://classroom.github.com/a/SLKO6Waa
+15209,Rajen Shrestha,Day 23 - Morning Challenge,Done,,,,,https://classroom.github.com/a/XRHu499A
+15222,Rajen Shrestha,Day 23 - CSS Hero Animations,Done,,"MI: The animation of the footer is based on the rotation of the footer, not the background image. Please fix correctness
+",https://bejewelled-crisp-17a92f.netlify.app/,,https://classroom.github.com/a/tu5GtisW
+15235,Rajen Shrestha,Day 23 - Social Media Dashboard,Done,,,https://timely-sprite-934b32.netlify.app/,,https://classroom.github.com/a/SpQacqAR
+15248,Rajen Shrestha,Day 24 - Morning Challenge,Done,,,,,
+15261,Rajen Shrestha,Day 24 - Project Friday Memory Game,Done,,,https://day-24-project-friday-memory-game-razen7.vercel.app/,,https://classroom.github.com/a/shFgo_7o
+15274,Rajen Shrestha,Day 25 - Morning Challenge,Done,,,"function isPossible(nums, k) {
+    return nums.length % k === 0;
+}
+
+console.log(isPossible([1,2,3,3,4,4,5,6], 4)===true);
+console.log(isPossible([3,2,1,2,3,4,3,4,5,9,10,11], 3)===true);
+console.log(isPossible([3,3,2,2,1,1],  3)===true);",,https://gist.github.com/McLarenCollege/1f370cf08039d4448720fbd0748697d0
+15288,Rajen Shrestha,Day 25 - Social Media Dashboard with Theme Switch,Done,,,https://timely-sprite-934b32.netlify.app/,,
+15301,Rajen Shrestha,Day 25 - React Forms and REST,Done,,MI: Your user list is not updating when submitting new user,"https://62d62028cec4862ff1d0dc0e--dainty-puppy-4f1bee.netlify.app/
+https://github.com/McLaren-College/day-25---react-forms-and-rest-razen7",,
+15324,Rajen Shrestha,Day 26 - Morning Challenge,Done,,,https://day-26-morning-challenge-razen7.vercel.app/,,https://classroom.github.com/a/fyjAvSSM
+15325,Rajen Shrestha,Day 26 - React Context API,Done,,,https://statuesque-blancmange-276d37.netlify.app/,,https://classroom.github.com/a/qf4i8Gir
+15342,Rajen Shrestha,Day 26 - React Context Practice Product Form,Done,,,https://gregarious-squirrel-8ef930.netlify.app/,,https://classroom.github.com/a/C2cgmbLb
+15355,Rajen Shrestha,Day 27 - Morning Challenge,Done,,,,,https://classroom.github.com/a/-ID1zPG4
+15368,Rajen Shrestha,Day 27 - Grocery Store,Done,,,https://idyllic-alpaca-270d8f.netlify.app/,,https://classroom.github.com/a/UbCB7BSO
+15381,Rajen Shrestha,Day 28 - Morning Challenge,Done,,,https://steady-lamington-26ff48.netlify.app/,,https://classroom.github.com/a/qJKXJBiC
+15394,Rajen Shrestha,Day 28 - ToDo App Reducer,Done,,MI: Please change the color of the completed task to be normally black. It is more than enough to have a strike on the completed tasks. ,https://lustrous-basbousa-966c98.netlify.app/,,https://classroom.github.com/a/MQ_6O_YH
+15407,Rajen Shrestha,Day 29 - Morning Challenge,Done,,,,,https://classroom.github.com/a/AbNyPX2K
+15420,Rajen Shrestha,Day 29 - Project Friday CTE,Done,,,https://elegant-torte-992638.netlify.app/,,
+15433,Rajen Shrestha,Day 30 - Morning Challenge,Done,,,https://willowy-malasada-3016bc.netlify.app/,,https://classroom.github.com/a/cPWqWhlD
+15447,Rajen Shrestha,Day 30 - Redux Intro,Done,,,https://62de5e2c251ac514c10cab3d--silly-scone-29d343.netlify.app/,,
+15460,Rajen Shrestha,Day 30 - ToDo app with Redux,Done,,,https://todo-app-redux-three.vercel.app/,,
+15473,Rajen Shrestha,Day 31 - Morning Challenge ,Done,,,,,https://classroom.github.com/a/OcUc4BNB
+15485,Rajen Shrestha,Day 31 - Contacts Firebase,Done,,,https://mellifluous-sunshine-dc4b64.netlify.app/,,https://classroom.github.com/a/hQlFoT9v
+15497,Rajen Shrestha,Day 31 - Customise Car,Done,,,https://day-31-customize-car-razen7.vercel.app/,,https://classroom.github.com/a/Xkbf4z-i
+15509,Rajen Shrestha,Day 32 - Morning Challenge,Done,,,,,https://classroom.github.com/a/LnUe6QqS
+15521,Rajen Shrestha,Day 32 - Chat App Firebase,Done,,,https://62e27f8963dac30cd7a6ac45--classy-kelpie-36cf0a.netlify.app/,,No Starter Code
+15533,Rajen Shrestha,Day 33 - Morning Challenge,Done,,,https://monumental-pie-3c8169.netlify.app/,,https://classroom.github.com/a/DBqRrIFw
+15545,Rajen Shrestha,Day 33 - Spotify App,Done,,"AP: The router is not working when I come back from Spotify login page to your site, it gives 404 error.",https://shiny-phoenix-5585da.netlify.app/,,
+15557,Rajen Shrestha,Day 34 - Morning Challenge Avatar,Done,,MI: Please submit the CORRECT link for this challenge ( Avatar Picker ),https://celadon-mermaid-24861b.netlify.app/,,
+15569,Rajen Shrestha,Day 35 - Morning Challenge,Done,,,https://celadon-mermaid-24861b.netlify.app/,,
+15581,Rajen Shrestha,Day 36 - Morning Challenge,Done,,,,,https://classroom.github.com/a/gtkk6FPm
+15593,Rajen Shrestha,Day 36 - Budget Manager Class Based,Done,,,https://dashing-bunny-cabcf9.netlify.app/,,https://classroom.github.com/a/rej_H-BB
+15605,Rajen Shrestha,Day 37 - Morning Challenge,Done,,,Auto upgrading isn't setup but i completed and tested it,,https://classroom.github.com/a/2aS-BCck
+15617,Rajen Shrestha,Day 37 - Pokemon PWA,Done,,,https://venerable-vacherin-3478de.netlify.app/,,No Starter Code
+15630,Rajen Shrestha,Day 37 - Memory Game PWA,Done,,,,,No Starter Code
+15642,Rajen Shrestha,Day 38 - Morning Challenge,Done,,,,,https://classroom.github.com/a/jKJx3UBV
+15654,Rajen Shrestha,Day 38 - React Router Firebase Practice,Done,,,"https://inbox-app-eta.vercel.app/login
+https://github.com/razen7/inbox-app",,
+15666,Rajen Shrestha,Day 39 - Morning Challenge,Pending Review,,,https://day-40-morning-challenge-razen7.vercel.app/,-,https://classroom.github.com/a/TTHVa4Nk
+15678,Rajen Shrestha,Day 40 - Morning Challenge,Done,,,,,https://gist.github.com/McLarenCollege/15bd572e41ab215939c2a66dc9fdaad3
+15690,Rajen Shrestha,Day 39 - Trip Planner,Done,,,"https://day-39-project-friday-trip-planner-razen7-v2.vercel.app/
+https://github.com/razen7/day-39---project-friday-trip-planner-razen7-v2",,
+15705,Rajen Shrestha,Day 40 - Movies Redux Practice,Done,,,,,
+15717,Rajen Shrestha,Day 41 - Morning Challenge,Done,,,"let eg1 = whereWillTheBallFall([[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]])
+console.log(eg1); // Output: [1,-1,-1,-1,-1]
+let eg2 = whereWillTheBallFall([[-1]])
+console.log(eg2); // Output: [-1]
+let eg3 = whereWillTheBallFall([[1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1], [1, 1, 1, 1, 1, 1], [-1, -1, -1, -1, -1, -1]]);
+console.log(eg3); // Output: [0,1,2,3,4,-1]
+
+function whereWillTheBallFall(grid) {
+    let res = [];
+    for (let cI = 0; cI < grid[0].length; cI++) {
+        const ele = grid[0][cI];
+        const startPos = [0, cI];
+        if (cI === 0 && ele === -1) {
+            res.push(-1)
+        } else if (cI === grid[0].length - 1 && ele === 1) {
+            res.push(-1)
+        } else {
+            let explore = exploreWay(grid, startPos, true);
+            res.push(explore);
+        }
+    }
+    return res;
+}
+
+function exploreWay(grid, pos1 = []) {
+    let [rI, cI] = pos1;
+    let direction1 = grid[rI][cI];
+    let cI2 = direction1 === 1 ? cI + 1 : cI - 1;
+
+    // overflow
+    if (cI2 < 0 || cI2 === grid[rI].length) {
+        return -1;
+    }
+
+    let direction2 = grid[rI][cI2];
+    if (direction1 != direction2) {
+        return -1;
+    }
+
+    // base
+    if (rI === grid.length - 1) {
+        return cI2;
+    }
+
+    //recursive case
+    return exploreWay(grid, [rI + 1, cI2]);
+}",,https://gist.github.com/McLarenCollege/1505ed667295ccfbcfd0f16657a2006f
+15729,Rajen Shrestha,Day 41 - File Organizer,Done,,"MI: You should get the home directory using the os platform, because you don't guarantee if your script will always running on your account on a windows machine/","const fs = require('fs');
+
+const BASE_DIR = __dirname;
+
+const DOC_PATH = BASE_DIR + '/documents';
+const IMG_PATH = BASE_DIR + '/images';
+
+const DOC_EXTS = ['pdf', 'doc', 'docx', 'ppt', 'xls', 'csv'];
+const IMG_EXTS = ['jpg', 'png', 'gif'];
+
+if (!fs.existsSync(DOC_PATH)) {
+    fs.mkdir(DOC_PATH, (err) => err && console.log('ERR', err.message));
+}
+if (!fs.existsSync(IMG_PATH)) {
+    fs.mkdir(IMG_PATH, (err) => err && console.log('ERR', err.message));
+}
+
+fs.readdir(BASE_DIR, ((err, files) => {
+    files.forEach(file => {
+        let extension = file.split('.').pop();
+        let source = BASE_DIR + '/' + file;
+        if (DOC_EXTS.includes(extension)) {
+            fs.copyFile(source, DOC_PATH + '/' + file, (err) => {
+                if (err) {
+                    console.log(err.message);
+                }
+            })
+        } else if (IMG_EXTS.includes(extension)) {
+            fs.copyFile(source, IMG_PATH + '/' + file, (err) => {
+                if (err) {
+                    console.log(err.message);
+                }
+            })
+        }
+    })
+}))",,
+15741,Rajen Shrestha,Day 42 - Morning Challenge,Done,,MI: This is not the correct morning challenge submission. Please fix this.,"function avgWaitTime(customers) {
+    let nextOrderProcessingTime = 0, waitTimes = [];
+    for (const [arrival, time] of customers) {
+        if (arrival > nextOrderProcessingTime) {
+            nextOrderProcessingTime = arrival;
+        }
+        let deliveryTime = nextOrderProcessingTime + time;
+        waitTimes.push(deliveryTime - arrival);
+        nextOrderProcessingTime = deliveryTime;
+    }
+    let avgWaitTime=waitTimes.reduce((accu, cur) => accu + cur) / waitTimes.length;
+    return avgWaitTime.toFixed(5);
+}
+
+console.log(avgWaitTime([[1, 2], [2, 5], [4, 3]])==='5.00000')
+console.log(avgWaitTime([[5,2],[5,4],[10,3],[20,1]])==='3.25000')",,https://gist.github.com/McLarenCollege/97e06b239563a96ef4bd9de382748026
+15754,Rajen Shrestha,Day 42 - Visitor Count website,Done,,MI: Please create a repo and upload your code.,,,https://gist.github.com/McLarenCollege/72dec10233209f397a394d39c84b772b
+15768,Rajen Shrestha,Day 43 - React Examination,Done,75.0,"AP: Nice UI and good implementation. Few edge cases are missing.
+- Logout button on the profile page
+- If I go to feedback page in which the User doesn't exist it should show an error and not let me submit a feedback. ",https://day-43-react-test-razen7.vercel.app/,,https://classroom.github.com/a/DLlng6bC
+15781,Rajen Shrestha,Day 44 - Morning Challenge,Done,,,"console.log(stone(1) === true);
+console.log(stone(2) === false);
+console.log(stone(4) === true);
+console.log(stone(7) === false);
+console.log(stone(17) === false);
+
+function stone(n) {
+    let aliceTurn = alice(n);
+    if (Number.isInteger(aliceTurn)) {
+        n = aliceTurn;
+    } else return aliceTurn;
+    let bobTurn = bob(n);
+    if (Number.isInteger(bobTurn)) {
+        n = bobTurn;
+    } else return bobTurn;
+    return stone(n);
+}
+
+function bob(n) {
+    // base
+    if (isPerfectSquare(n)) {
+        return false;
+    } else if (n === 0) {
+        return true;
+    } else if (n === 1 || n === 3) {
+        return false;
+    } else if (n === 2) {
+        return true;
+    }
+
+    // recursive
+    let move;
+    if (n % 2 === 1) {
+        move = findOptimal(n - 1);
+    } else {
+        move = findOptimal(n - 1);
+    }
+    return n - move;
+}
+function alice(n) {
+    // base
+    if (isPerfectSquare(n)) {
+        return true;
+    } else if (n === 0) {
+        return false;
+    } else if (n === 1 || n === 3) {
+        return true;
+    } else if (n === 2) {
+        return false;
+    }
+
+    // recursive
+    let move;
+    if (n % 2 === 0) {
+        move = findOptimal(n - 1);
+    } else {
+        move = findOptimal(n - 1);
+    }
+    return n - move;
+}
+function findOptimal(num, numType) {
+    for (num; num > 3; num -= 2) {
+        if (isPerfectSquare(num)) {
+            return num;
+        }
+    }
+    return 1;
+}
+function isPerfectSquare(n) {
+    return n > 0 && Math.sqrt(n) % 1 === 0;
+}",,https://gist.github.com/McLarenCollege/93db67b2e77ae8315aeb85e28cab66c4
+15793,Rajen Shrestha,Day 44 - MongoDB Queries,Done,,,"1 db.docs.find() ✔️
+2 db.docs.find({},{restaurant_id:1,name:1,borough:1,cuisine:1})  ✔️
+3 db.docs.find({},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0}) ✔️
+4 db.docs.find({},{'address.zipcode':1,_id:0}) ✔️
+5 db.docs.find({borough:'Brooklyn'}) ✔️
+6 db.docs.find({borough:'Brooklyn'}, {limit:5}) ✔️
+7 db.docs.find({borough:'Brooklyn'}, {limit:5}).skip(5) ✔️
+8 db.docs.find({'grades.score': { $gt: 70 }}) ✔️
+9 db.docs.find({'grades': { $elemMatch: {""score"": {  $gt: 70, $lt: 100 }}}}) ✔️
+10 db.docs.find({ 'cuisine': { $ne: 'American ' }, 'grades.grade': 'A', 'borough': { $ne: 'Brooklyn' } }).sort({'cuisine':-1}) ✔️
+11 db.docs.find({'borough': 'Bronx', $or: [ {'cuisine': 'American'},{'cuisine': 'Chinese'} ] }) ✔️
+12  db.docs.find({$or: [{ 'name': /^Sea/ }, {$and: [{'cuisine': { $ne: 'American' }},{'cuisine': { $ne: 'Chinese' }}]} ]},{'restaurant_id': 1, 'name':1, 'borough':1, 'cuisine':1}) ✔️
+13 sort({'cuisine':1,'borough':-1}) ✔️
+14 db.docs.find({'grades':{'date':ISODate(""2013-09-11T00:00:00Z""),'grade':'A','score':11}},{'restaurant_id':1,'name':1,'grades':1})  ✔️
+15 db.docs.find().sort({'name':1})  ✔️
+16 db.docs.aggregate([ { $match: { 'borough': 'Bronx', 'cuisine': 'Caribbean' } }, { $group: { _id: '$cuisine','CaribbeanCount': {$sum:1 } } } ]) ✔️",,https://gist.github.com/ArnavPuri/d93c269117a19e167d8a6db68b28fa48
+15805,Rajen Shrestha,Day 45 - Morning Challenge,Done,,,"console.log(fractions(1)); // []
+console.log(fractions(2)); // [""1/2""]
+console.log(fractions(3)); // [""1/2"",""1/3"",""2/3""]
+console.log(fractions(4)); // [""1/2"",""1/3"",""1/4"",""2/3"",""3/4""]
+
+function fractions(n) {
+    let res = [];
+    for (let numerator = 1; numerator < n; numerator++) {
+        for (let denominator = numerator + 1; denominator <= n; denominator++) {
+            const picked = numerator / denominator;
+
+            let tmp;
+            if (numerator !== 1 && Number.isInteger(denominator / numerator)) {
+                tmp = `1/${denominator / numerator}`;
+            } else
+                tmp = `${numerator}/${denominator}`;
+            if (picked < 1 && !res.includes(tmp)) {
+                res.push(tmp);
+            }
+        }
+    }
+    return res;
+}",,https://gist.github.com/McLarenCollege/ea9f791d2f07c03c1a2071c6d31fbc42
+15817,Rajen Shrestha,Day 45 - Blog ExpressJS,Done,,,,,Create your own project!
+15829,Rajen Shrestha,Day 46 - Morning Challenge,Done,,,https://day-46-morning-challenge-razen7.vercel.app/,,https://classroom.github.com/a/xeFBw_wE
+15841,Rajen Shrestha,Day 47 - Morning Challenge,Done,,,"console.log(findWinner([2, 5, 3, 5, 4, 6, 7], 2)); // Output: 5
+console.log(findWinner([3,2,1], 10)); // Output: 3
+console.log(findWinner([1, 11, 22, 33, 44, 55, 66, 77, 88, 99], 1000000000)); // Output: 99
+function findWinner(arr, k) {
+    let winCount = {};
+    arr.forEach(n => {
+        winCount[n] = 0;
+    });
+
+    let iter = 0;
+    while (winCount[arr[0]] != k && winCount[arr[1]] != k) {
+        if (arr[0] > arr[1]) {
+            winCount[arr[0]]++;
+            let tmp = arr.splice(1, 1);
+            arr.push(tmp[0]);
+        } else if (arr[0] <= arr[1]) {
+            winCount[arr[1]]++;
+            arr.push(arr.shift());
+        } 
+        iter++;
+        if (iter === arr.length-1) {
+            return arr[0];
+        }
+    }
+
+    return winCount[arr[0]] > winCount[arr[1]] ? arr[0] : arr[1];
+}",,https://gist.github.com/McLarenCollege/d5bca1e4e64827b87c5153beef74eff4
+15853,Rajen Shrestha,Day 47 - Marketplace Backend,Done,,MI: You should finish the frontend first to test your backend,Just the main functionality is there,,Create your own project!
+15865,Rajen Shrestha,Day 47 - Marketplace Frontend,Done,,,partial submission,,Create your own project!
+15877,Rajen Shrestha,Day 48 - Morning Challenge,Done,,,,,https://classroom.github.com/a/Ez09_Ljx
+15890,Rajen Shrestha,Day 49 - Morning Challenge,Done,,,https://day-49-morning-challenge-razen7.vercel.app/,,https://classroom.github.com/a/VEjT5_sU
+15902,Rajen Shrestha,Day 50 - Morning Challenge,Done,,,,,https://classroom.github.com/a/HN1pd0Zq
+15914,Rajen Shrestha,Day 51 - Morning Challenge,Done,,MI: Please submit your deployment link for this app.,,,https://gist.github.com/McLarenCollege/e26ea65564f944ce4d9c7a0012cbe024
+15926,Rajen Shrestha,Day 51 - URL Shortner,Done,,MI: Resulted in page no found. Here is,https://url-shortener-77.herokuapp.com/,,
+15938,Rajen Shrestha,Day 52 - Morning Challenge,Done,,,https://places-api-mclauren.herokuapp.com/,,https://gist.github.com/McLarenCollege/0ebd5a6724e6f2c19226340556949ea0
+15950,Rajen Shrestha,Day 52 - Trello Clone,Done,,,"https://thullo-frontend-xi.vercel.app
+https://github.com/razen7/thullo-frontend",,https://devchallenges.io/challenges/wP0LbGgEeKhpFHUpPpDh
+15962,Rajen Shrestha,Day 53 - Morning Challenge,Done,,,made corrections,,https://classroom.github.com/a/KuXtJzmE
+15975,Rajen Shrestha,Day 54 - Multiplayer TicTacToe,Awaiting Submission,,,,-,https://gist.github.com/McLarenCollege/fa81a7e91b476cadb7ae76a4025462a8
+15987,Rajen Shrestha,Day 54 - Websocket Drawing App,Done,,MI: No Live Update,https://draw-together-mclauren.herokuapp.com/,,https://classroom.github.com/a/oKiqE9TD
+16000,Rajen Shrestha,Day 55 - Morning Challenge,Done,,MI: Slider is not working!,"https://d55-custom-range-slider.vercel.app/
+https://github.com/razen7/d55-Custom-Range-Slider
+",,https://gist.github.com/McLarenCollege/67aac0a3ad2fa341e9967a12911d3290
+16012,Rajen Shrestha,Day 54 - Morning Challenge,Done,,,create game file in same repo :) ,,Mastermind game
+16024,Rajen Shrestha,Day 56 - Morning Challenge,Done,,MI: Please deploy your application,"https://github.com/razen7/d56
+https://d56.vercel.app/",,https://gist.github.com/McLarenCollege/786ac21ea0cd17816dec3e7334dee288
+16036,Rajen Shrestha,Day 57 - Morning Challenge,Done,,,,,https://gist.github.com/McLarenCollege/d73ec83b0137ff56b482f259c8fbf826
+16049,Rajen Shrestha,Day 56 - P2P Video Calling,Done,,,,,
+16075,Rajen Shrestha,Day 58 - Morning Challenge,Done,,,"function minimumClips(clips, time) {
+    // 1 sort chip
+    clips.sort((a, b) => a[0] - b[0])
+
+    // filter longest clips with same start time removing inclusive short intervals
+    for (let p = 0; p < clips.length - 1; p++) {
+        if (clips[p][0] === clips[p + 1][0]) {
+            clips.splice(clips[p][1] < clips[p + 1][1] ? p : p + 1, 1);
+            p--;
+        }
+    }
+
+    // filter longest clips removing inclusive short intervals to next interval
+    for (let p = 0; p < clips.length - 1; p++) {
+        if (clips[p][0] < clips[p + 1][0] && clips[p][1] >= clips[p + 1][1]) {
+            clips.splice(p + 1, 1);
+            p--;
+        }
+    }
+    // console.log(clips);
+    // filter longest clips removing inclusive short intervals to prev interval
+    for (let p = 1; p < clips.length - 1; p++) {
+        let [prevS, prevE] = clips[p - 1];
+        let [curS, curE] = clips[p - 1];
+        let [nextS, nextE] = clips[p + 1];
+        if (nextS <= prevE) {
+            // console.log('Hi! Hi! Hi!');
+            if (curE <= nextE) {
+                clips.splice(p, 1);
+            }
+        }
+    }
+    // console.log(clips);
+    if (clips[0][0] === 0 && clips[clips.length - 1][1] >= time) {
+        return clips.length;
+    } else {
+        return -1;
+    }
+}
+
+console.log(minimumClips([[0, 2], [4, 6], [8, 10], [1, 9], [1, 5], [5, 9]], 10)); //3
+console.log(minimumClips([[0, 1], [6, 8], [0, 2], [5, 6], [0, 4], [0, 3], [6, 7], [1, 3], [4, 7], [1, 4], [2, 5], [2, 6], [3, 4], [4, 5], [5, 7], [6, 9]], 9)); //3
+console.log(minimumClips([[0, 1], [1, 2]], 5)); //-1
+",,https://gist.github.com/McLarenCollege/71bb049fcbd1903dc34b1ef64b1efd79
+16088,Rajen Shrestha,Day 59 - Morning Challenge,Pending Review,,,https://d59.vercel.app/,-,https://classroom.github.com/a/RgEreZok
+16114,Rajen Shrestha,Day 60 - Backend Exam,Done,50.0,AP: Looks like you were in right direction but fell short on time. The order should have an array of dishes. not just one dish,,,https://gist.github.com/McLarenCollege/a7e6e3701c85a53525b35a3a9032337d
+16127,Rajen Shrestha,Day 60 - Morning Challenge,Awaiting Submission,,,,-,https://classroom.github.com/a/3XB755bo
+16140,Rajen Shrestha,Day 61 - Morning Challenge,Awaiting Submission,,,,-,https://classroom.github.com/a/AxnOntmO
+16154,Rajen Shrestha,Day 62 - Morning Challenge,Done,,,,,https://classroom.github.com/a/vKWFK0vB
